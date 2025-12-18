@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import Leadlist from './pages/Leadlist.jsx'
+import LeadList from './pages/LeadList.jsx'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import AddNewLead from './pages/AddNewLead.jsx'
 import Agent from './pages/Agent.jsx'
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
   },
   {
     path:"/list",
-    element: <Leadlist />
+    element: <LeadList />
   },
   {
     path:"/addlead",
