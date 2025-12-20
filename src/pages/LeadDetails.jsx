@@ -53,6 +53,8 @@ function LeadDetails() {
     } catch (error) {
        console.log(error)
     }
+
+    window.location.reload()
   }
 
   
@@ -123,8 +125,9 @@ function LeadDetails() {
           console.log(error)
      }
 
-     setEdit(!edit)
 
+     setEdit(!edit)
+     window.location.reload()
   }
 
 
@@ -145,7 +148,7 @@ function LeadDetails() {
   return (
     <>
        <header className='d-flex justify-content-center py-3 align-items-center bg-info text-info-emphasis'>
-               <h2 className='display-3'>Leads By Status</h2>
+               <h2 className='display-3'>Lead Details</h2>
        </header>
        <div className='row g-0 ' >
             <div className='col-4 bg-primary col-lg-2 text-white ' style={{minHeight:"480px"}}>
@@ -225,7 +228,7 @@ function LeadDetails() {
                    <Select options={tagsOptions}  isMulti   value={tagsOptions.filter(opt=>leadForm.tags.includes(opt.value))} onChange={handleTagsChange} />
               </div>
               <div className='d-flex justify-content-center'>
-                  <button  className='btn btn-warning float-center'>Edit Lead Button</button>
+                  <button  className='btn btn-warning my-2 float-center'>Edit Lead Button</button>
               </div>
               </form>:
               <button className='btn btn-warning m-3'  onClick={()=>setEdit(!edit)}  >Edit Lead Details</button> }

@@ -48,7 +48,7 @@ function App() {
                     </ul>
                     <hr />
                      <h4 className='text-center'>Quick Filters:</h4>
-                     <div className='d-flex justify-content-center gap-3'>
+                     <div className='d-flex justify-content-center gap-3 py-3'>
                            <Link className='btn btn-primary'  to='/leads/New'  >New</Link>
                            <Link className='btn btn-info' to='/leads/Contacted'  >Contacted</Link>
                            <Link className='btn btn-warning' to='/addlead' >Add a new Lead</Link>
