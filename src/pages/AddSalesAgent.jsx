@@ -1,6 +1,10 @@
 import { useState } from "react"
+import { Link } from "react-router"
+import { useNavigate } from "react-router"
 
 function AddSalesAgent() {
+
+  const navigate = useNavigate()
 
   const [agentForm,setAgent] = useState({
     name:"",
@@ -30,6 +34,8 @@ function AddSalesAgent() {
           throw "Agent not created"
        }
 
+       navigate("/agent")
+
     } catch (error) {
       console.log(error)
     }
@@ -40,7 +46,14 @@ function AddSalesAgent() {
        <header className='d-flex justify-content-center py-3 align-items-center bg-info text-info-emphasis'>
                <h2 className='display-3'>Add New Sales Agent</h2>
        </header>
-       <main className='bg-primary d-flex justify-content-center align-items-center  py-5' style={{minHeight:"500px"}}  >
+       <main className="row">
+        <div className='col-12 bg-primary col-lg-2 text-white ' style={{minHeight:"480px"}}>
+                  <h3 className='display-5 text-center'>SideBar</h3>
+                  <div className='bg-primary-subtle d-flex justify-content-center align-items-center mx-3' style={{minHeight:"200px",borderRadius:"15px"}}>
+                        <Link className='btn btn-outline-info' to='/' >Back to dashboard</Link>
+                  </div>
+            </div>
+         <div className='bg-primary col-12 col-lg-10 d-flex justify-content-center align-items-center  py-5' style={{minHeight:"500px"}}  >
          <form className='bg-secondary text-white px-2 py-2  ' onSubmit={handleSubmit}  style={{width:"1000px"}} >
               <h1 className='display-5 text-center'>Sales Agent Details</h1>
               <div className='input-group mb-3'>
@@ -55,7 +68,9 @@ function AddSalesAgent() {
                   <button  className='btn btn-warning float-center'>Create Sales Agent</button>
               </div>
          </form>
+       </div>
        </main>
+      
        <footer className='d-flex justify-content-center py-5 align-items-center bg-info text-info-emphasis' >
            &copy;ClientConnect.All Rights Reserved.
        </footer>

@@ -1,11 +1,14 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import useFetch from '../useFetch'
 import Select from "react-select"
 
 
 
 function AddNewLead() {
+
+  const  navigate = useNavigate() 
 
   const {data,loading,error} = useFetch("https://crm-backend-amber-ten.vercel.app/agents")
    
@@ -53,6 +56,8 @@ function AddNewLead() {
           const data = await response.json()
           console.log(data)
 
+          navigate("/list")
+
      } catch (error) {
           console.log(error)
      }
@@ -75,7 +80,14 @@ function AddNewLead() {
        <header className='d-flex justify-content-center py-3 align-items-center bg-info text-info-emphasis'>
                <h2 className='display-3'>Add a new Lead</h2>
        </header>
-       <main className='col-12  bg-primary d-flex justify-content-center align-items-center py-3'>
+       <div className='row'>
+          <div className='col-12 bg-primary col-lg-2 text-white ' style={{minHeight:"480px"}}>
+                  <h3 className='display-5 text-center'>SideBar</h3>
+                  <div className='bg-primary-subtle d-flex justify-content-center align-items-center mx-3' style={{minHeight:"200px",borderRadius:"15px"}}>
+                        <Link className='btn btn-outline-info' to='/' >Back to dashboard</Link>
+                  </div>
+          </div>
+         <div className='col-12 col-lg-10  bg-primary d-flex justify-content-center align-items-center py-3'>
          <form className='bg-secondary text-white px-2 py-2  '  style={{width:"1000px"}} onSubmit={handleSubmit} >
               <h1 className='display-5 text-center'>Lead Details</h1>
               <div className='input-group mb-3'>
@@ -133,7 +145,8 @@ function AddNewLead() {
                   <button  className='btn btn-warning float-center'>Create Lead Button</button>
               </div>
          </form>
-       </main>
+       </div>
+       </div>
        <footer className='d-flex justify-content-center py-5 align-items-center bg-info text-info-emphasis' >
            &copy;ClientConnect.All Rights Reserved.
        </footer>
