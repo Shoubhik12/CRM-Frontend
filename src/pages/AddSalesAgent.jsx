@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Link } from "react-router"
 import { useNavigate } from "react-router"
+import {  toast } from 'react-toastify';
 
 function AddSalesAgent() {
 
@@ -33,7 +34,7 @@ function AddSalesAgent() {
        if(!response.ok){
           throw "Agent not created"
        }
-
+       toast("New Sales Agent Created")
        navigate("/agent")
 
     } catch (error) {

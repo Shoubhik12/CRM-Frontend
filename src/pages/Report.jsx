@@ -39,7 +39,7 @@ function Report() {
        <header className='d-flex justify-content-center py-3 align-items-center bg-info text-info-emphasis'>
                <h2 className='display-3'>Lead List</h2>
        </header>
-       <div className='row g-0 ' >
+       <div className='row g-0  ' >
             <div className='col-4 bg-primary col-lg-2 text-white ' style={{minHeight:"480px"}}>
                   <h3 className='display-5 text-center'>SideBar</h3>
                   <div className='bg-primary-subtle d-flex justify-content-center align-items-center mx-3' style={{minHeight:"200px",borderRadius:"15px"}}>
@@ -49,8 +49,8 @@ function Report() {
             <div className='col-8 bg-primary-subtle px-2 col-lg-10 overflow-auto'>
                 <h3 className='display-5  text-center'  >Report Overview</h3>
                     <hr />
-                    <h2>Total Leads closed and in pipeline:</h2>
-                    <div  style={{maxHeight:"300px"}}>
+                    <h2 className='text-center'>Total Leads closed and in pipeline</h2>
+                    <div className='d-flex justify-content-center'  style={{maxHeight:"300px"}}>
                     {!loading && !pipeline.loading && <Doughnut  data = {{
                                  labels: [
                                           "Total leads in pipeline",
@@ -68,8 +68,8 @@ function Report() {
                         }}  />}        
                     </div>   
                     <hr />
-                    <h2>Leads closed by Sales Agent:</h2>
-                    <div style={{maxHeight:"300px"}}>
+                    <h2 className='text-center'>Leads closed by Sales Agent</h2>
+                    <div className='d-flex justify-content-center' style={{maxHeight:"300px"}}>
                       {
                         !loading && data && <Bar data={{
                            labels:Object.keys(agents),
@@ -81,8 +81,8 @@ function Report() {
                       }
                     </div>
                     <hr />
-                    <h2>Lead Status Distribution:</h2>
-                    <div style={{maxHeight:"300px"}}>
+                    <h2 className='text-center'>Lead Status Distribution</h2>
+                    <div className='d-flex justify-content-center my-2' style={{maxHeight:"300px"}}>
                        {!loading && !pipeline.loading && <Doughnut  data = {{
                                 labels: Object.keys(statuses)  ,
                                 datasets: [{

@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router-dom'
 import useFetch from '../useFetch'
 import { useEffect } from 'react'
 import Select from "react-select"
+import {  toast } from 'react-toastify';
 
 function LeadDetails() {
 
@@ -120,6 +121,7 @@ function LeadDetails() {
 
           const data = await response.json()
           console.log(data)
+          toast("Details Edited")
 
      } catch (error) {
           console.log(error)

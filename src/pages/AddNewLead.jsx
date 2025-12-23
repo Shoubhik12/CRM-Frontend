@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import useFetch from '../useFetch'
 import Select from "react-select"
-
+import {  toast } from 'react-toastify';
 
 
 function AddNewLead() {
@@ -55,6 +55,8 @@ function AddNewLead() {
 
           const data = await response.json()
           console.log(data)
+
+          toast("New Lead added. ")
 
           navigate("/list")
 

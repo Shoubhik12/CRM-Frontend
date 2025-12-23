@@ -46,7 +46,7 @@ function Settings() {
   return (
     <>
        <header className='d-flex justify-content-center py-3 align-items-center bg-info text-info-emphasis'>
-               <h2 className='display-3'>Sales Agent Management</h2>
+               <h2 className='display-3'>Settings</h2>
        </header>
        <div className='row g-0 ' >
             <div className='col-12 bg-primary col-lg-2 text-white ' style={{minHeight:"480px"}}>
@@ -56,22 +56,21 @@ function Settings() {
                   </div>
             </div>
             <div className='col-12 bg-primary-subtle col-lg-10 overflow-auto'>
-                <h3 className='display-5  text-center'  >Settings</h3>
-                <hr />
+                <h3 className='display-5  text-center'  >Lead List</h3>
                 {
-                        !loading && <ul>
+                        !loading && <ul className='px-4'>
                              {
-                                data.map(dt=><li className='py-2'>
+                                data.map(dt=><li className='py-3 '>
                                     Agent: {dt.name} - {dt.email}   <button className='btn btn-danger float-end' onClick={()=>deleteAgents(dt._id)}   >Delete</button>
                                 </li>)
                              }
                         </ul>
                 }
                 <hr />
-                <h3 className='display-5  text-center'  >Lead List</h3>
+                <h3 className='display-5  text-center'  >Agents</h3>
                 {
-                    !leads.loading && <ul>{
-                             leads.data.map(dt=><li className='py-2'>{dt.name}   <button className='btn btn-danger float-end' onClick={()=>deleteLeads(dt._id)}  >Delete</button></li>)
+                    !leads.loading && <ul className='px-4'>{
+                             leads.data.map(dt=><li className='py-3'>{dt.name}   <button className='btn btn-danger float-end' onClick={()=>deleteLeads(dt._id)}  >Delete</button></li>)
                       }</ul>
                 }
             </div>

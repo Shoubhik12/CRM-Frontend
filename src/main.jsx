@@ -11,6 +11,7 @@ import LeadsStatus from './pages/LeadsStatus.jsx'
 import LeadDetails from './pages/LeadDetails.jsx'
 import Report from './pages/Report.jsx'
 import Settings from './pages/Settings.jsx'
+import { ToastContainer } from 'react-toastify';
 
 
 const router = createBrowserRouter([
@@ -51,5 +52,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router} />
+    <ToastContainer />
   </StrictMode>,
 )
