@@ -12,13 +12,12 @@ ClientConnect, a lightweight and intuitive CRM web application designed to help 
 
 ## Quick Start
 
-'''
+```
   git clone https://github.com/Shoubhik12/CRM-Frontend.git
   cd <your-repo>
   npm install
   npm run dev 
-
-'''
+```
 
 ## Technologies
 
@@ -31,7 +30,7 @@ ClientConnect, a lightweight and intuitive CRM web application designed to help 
 ---
 
 ## Demo Video
- Watch a  video explainig all the features of this website: [Video Link] ( https://drive.google.com/file/d/1KUDsNvl41airYpNN3IAmhbpV0DPGyf5i/view?usp=sharing)
+ Watch a  video explainig all the features of this website: [Video Link]( https://drive.google.com/file/d/1KUDsNvl41airYpNN3IAmhbpV0DPGyf5i/view?usp=sharing)
 
  ## Features
 
