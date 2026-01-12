@@ -48,6 +48,7 @@ ClientConnect, a lightweight and intuitive CRM web application designed to help 
 ## API References 
 
  ***POST/api/leads***
+  
   Creates a new lead.
   Response - 201 Created.
 
