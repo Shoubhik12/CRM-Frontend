@@ -50,30 +50,40 @@ ClientConnect, a lightweight and intuitive CRM web application designed to help 
  ***POST/api/leads***
   
   Creates a new lead.
+
   Response - 201 Created.
 
 ***GET/api/leads***
+
   Fetches leads with filtering.
+
   Response-
   ```[{"name","source","salesAgent",...}...]```  
 
 ***POST/api/leads/id***
+
   Updates a lead.
+
   Response-
   ```[{"name","source","salesAgent",...}...]```  
 
 ***Delete/api/leads/:id***
+
   Deletes a lead.
+
   Response-
   ```[{"name","source","salesAgent",...}...]```  
 
 ***Post/api/agents***
+
   Adds a new agent.
+
   Response- 201 Created.
 
 ***Get/api/agents***
+
   Fetch a list of the salesagents.
-  Response-
+
   Response-
   ```[{"name","email"}...]```        
 
