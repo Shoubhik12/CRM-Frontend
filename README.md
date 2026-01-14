@@ -29,19 +29,30 @@ ClientConnect, a lightweight and intuitive CRM web application designed to help 
 
 ---
 
+## Screenshots
+   
+   ### Lead List page
+   ![Lead list](image.png)   
+
+   ### Lead Details page
+   ![Details page](image-1.png)
+
+
+---
+
 ## Demo Video
- Watch a  video explainig all the features of this website: [Video Link]( https://drive.google.com/file/d/1KUDsNvl41airYpNN3IAmhbpV0DPGyf5i/view?usp=sharing)
+ Watch a  video explaining all the features of this website: [Video Link]( https://drive.google.com/file/d/1KUDsNvl41airYpNN3IAmhbpV0DPGyf5i/view?usp=sharing)
 
  ## Features
 
-- AddNewLead - adds  a new lead.
-- AddSalesAgent - adds a new agent. 
+- Add New Lead - adds  a new lead.
+- Add SalesAgent - adds a new agent. 
 - Agents- lists all the agents.
-- LeadDetails - shows the details of a list with edit and comment button. 
-- LeadList - lists all  the leads with their statuses. 
-- LeadsStatus - lists list as per their status. 
-- Report- shows the report based on the data.
-- Settings- lists all the agents and leads with delete buttons.
+- Lead Details - shows the details of a list with edit and comment button. 
+- Lead List - lists all  the leads with their statuses. 
+- Leads Status - lists list as per their status. 
+- Report - shows the report based on the data.
+- Settings - lists all the agents and leads with delete buttons.
 
 ---
 
@@ -85,7 +96,22 @@ ClientConnect, a lightweight and intuitive CRM web application designed to help 
   Fetch a list of the salesagents.
 
   Response-
-  ```[{"name","email"}...]```        
+  ```[{"name","email"}...]``` 
+
+---
+
+## Environment Setup And Backend(/server/.env)
+
+  ### Server
+  PORT=3000
+  NODE_ENV=development
+
+ ### Database
+ MONGODB_URI=mongodb+srv://NeoGStudent:shoubhik@neog.h3ciunv.mongodb.net/?retryWrites=true&w=majority&appName=NeoG
+
+
+
+---
 
 ## Contacts
 
